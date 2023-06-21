@@ -13,5 +13,5 @@
 sidebar-category:
   - title : "카테고리"
     children:
-      - title: "Study"
-        url: "categories/study"
+      - title: "Spring"
+        url: "categories/spring"
