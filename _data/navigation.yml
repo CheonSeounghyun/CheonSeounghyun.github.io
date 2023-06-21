@@ -10,8 +10,3 @@
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-sidebar-category:
-  - title : "Spring"
-    children:
-      - title: "Spring"
-        url: "categories/spring"

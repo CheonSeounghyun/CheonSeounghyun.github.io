@@ -291,5 +291,3 @@ defaults:
       comments: false
       share: false
       related: true
-      sidebar:
-        nav: "sidebar-category"
