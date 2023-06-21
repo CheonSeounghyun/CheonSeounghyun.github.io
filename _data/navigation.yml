@@ -11,7 +11,7 @@
   # - title: "Sitemap"
   #   url: /sitemap/
 sidebar-category:
-  - title : "카테고리"
+  - title : "Spring"
     children:
       - title: "Spring"
         url: "categories/spring"
