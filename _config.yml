@@ -50,9 +50,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - tag_generator.py
   - README.md
-  - CODEOWNERS
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
