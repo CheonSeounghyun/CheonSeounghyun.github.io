@@ -1,0 +1,11 @@
+---
+layout: base
+---
+<div class="post tag-page">
+  <h1>Tag: <span class="tag-name">{{ page.tag }}</span></h1>
+  <ul class="post-list">
+  {% for post in site.tags[page.tag] %}
+      {% include post-tile.html post=post %}
+  {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,73 @@
+---
+layout: base
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <p>
+        {% include author.html post=page avatar_size=40 include_email=true %}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+      </p>
+      <p>
+        {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a href="/tag/{{ tag_name }}">
+            <span class="tag">{{ tag_name }}</span>
+          </a>
+        {% endfor %}
+      </p>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <!-- Render read-more section -->
+  {% if page.authors %}
+    {% assign current_post_author = page.authors[0] %}
+  {% else %}
+    {% assign current_post_author = page.author %}
+  {% endif %}
+
+  <!-- Not to render read-more section if there is no posts of the post author -->
+  {% capture tmp_post_urls %}
+  {% for post in site.posts %}
+    {% if post.url != page.url and post.author == current_post_author %}
+      {{ post.url }}
+    {% elsif post.url != page.url and post.authors.size > 0 and post.authors[0] == current_post_author %}
+      {{ post.url }}
+    {% endif %}
+  {% endfor %}
+  {% endcapture %}
+
+  <!-- Take last 4 -->
+  {% assign recent_other_post_urls_of_author = tmp_post_urls | split:' ' | slice: 0, 4 %}
+
+  {% if recent_other_post_urls_of_author.size > 0 %}
+  <div class="read-more">
+    <h2>Read more</h2>
+    <ul class="post-list">
+    {% assign num_posts = 0 %}
+    {% for post in site.posts %}
+      {% for allowed_post_url in recent_other_post_urls_of_author %}
+        {% if post.url == allowed_post_url %}
+          {% include post-tile.html post=post %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
