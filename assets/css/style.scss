@@ -307,3 +307,75 @@ pre, code {
 .top-image {
     vertical-align: top;
 }
+
+.notice {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #f2f3f3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(189,193,196,0.25)
+}
+
+.notice--primary {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #e2e4e5;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(111,119,125,0.25)
+}
+
+.notice--info {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #d8ebf1;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(59,156,186,0.25)
+}
+
+.notice--warning {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #f7e5cd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(214,127,5,0.25)
+}
+
+.notice--success {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #d9edd9;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(63,166,63,0.25)
+}
+
+.notice--danger {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #3d4144;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-indent: initial;
+    background-color: #fcdfde;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(238,95,91,0.25)
+}
