@@ -5,7 +5,7 @@ title: "nginx-rtmp 모듈 활용 실시간 스트리밍 구현"
 published: true
 lang: ko
 excerpt: 실시간 스트리밍 기술에 대해 소개하고 스트리밍을 웹페이지에 송출하는 서버와 화면을 구현해 봅니다.
-tags: nginx 
+tags: nginx stream
 author: seounghyun
 ---
 ## COVID-19 와 Live Stream
