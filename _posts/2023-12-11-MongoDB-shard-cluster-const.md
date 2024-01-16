@@ -5,7 +5,7 @@ title: "MongoDB 샤드 클러스터 구성"
 published: true
 lang: ko
 excerpt: MongoDB의 샤드 클러스터 구성을 알아보고 구현해 봅니다
-tags: NoSQL MongoDB
+tags: nosql mongodb
 author: seounghyun
 ---
 

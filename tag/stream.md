@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: stream"
+title: "Tag: Stream"
 tag: stream
 robots: noindex
 ---

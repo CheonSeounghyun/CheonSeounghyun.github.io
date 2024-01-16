@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: nginx"
+title: "Tag: Nginx"
 tag: nginx
 robots: noindex
 ---

@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: gis"
+title: "Tag: GIS"
 tag: gis
 robots: noindex
 ---
