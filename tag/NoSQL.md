@@ -1,6 +1,6 @@
 ---
 layout: tagpage
 title: "Tag: NoSQL"
-tag: NoSQL
+tag: nosql
 robots: noindex
 ---
