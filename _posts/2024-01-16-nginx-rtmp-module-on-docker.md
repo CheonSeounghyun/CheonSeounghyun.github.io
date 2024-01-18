@@ -93,7 +93,7 @@ EXPOSE 8080
 
 CMD ["-g", "daemon off;"]
 ```
-[Building a docker image with nginx rtmp module][Building a docker image with nginx rtmp module]
+[Building a docker image with nginx rtmp module][Building a docker image with nginx rtmp module]   
 위와 같은 내용으로 'Dockerfile'이라는 파일을 작성후에 원하는 경로에 저장합니다.(확장자는 필요없습니다) 도커파일 내용을 간략하게 설명하자면, 경량 리눅스 OS인 알파인을 베이스로 구축하여 nginx와 nginx-rtmp모듈을 설치하고, 컴파일후에 nginx를 실행시키겠다- 라는 내용을 담고있습니다.   
 이제 작성한 도커파일로 도커 이미지를 빌드해보겠습니다. 명령 프롬프트를 열어 도커파일이 있는 경로로 이동한뒤에, 도커 빌드 명령어를 실행합니다.
 ```
