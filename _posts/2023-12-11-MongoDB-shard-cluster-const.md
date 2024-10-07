@@ -490,6 +490,10 @@ db.collection.getShardDistribution() 메서드를 사용하여 특정 콜렉션�
 {: style="text-align: center; font-style: italic;"}
 
 ## Reference
-https://www.mongodb.com/docs/manual/sharding/  
-https://www.mongodb.com/docs/manual/core/sharded-cluster-components/  
-https://hoing.io/archives/8381
+[https://www.mongodb.com/docs/manual/sharding/][refer link1]  
+[https://www.mongodb.com/docs/manual/core/sharded-cluster-components/][refer link2]  
+[https://hoing.io/archives/8381][refer link3]
+
+[refer link1]:https://www.mongodb.com/docs/manual/sharding/
+[refer link2]:https://www.mongodb.com/docs/manual/core/sharded-cluster-components/
+[refer link3]:https://hoing.io/archives/8381
