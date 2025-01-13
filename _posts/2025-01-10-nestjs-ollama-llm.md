@@ -18,7 +18,7 @@ author: seounghyun
 공식사이트에서 소개하고있는 NestJS의 대표적인 특징들입니다. 모듈화된 설계, TypeScript 지원, 의존성 주입, 유연한 확장성, 강력한 생태계 및 문서등을 특징으로 소개하고 있습니다. NestJS의 또다른 특징으로 강력한 CLI지원이 있습니다. 개발자들은 간단한 커맨드 명령어로 NestJS에서 지원하는 여러가지 Object및 프로젝트 구조를 생성하고 설계할 수 있습니다.
 
 ## Quick Start
-NestJS는 Node.js 런타임 환경에서 구동됩니다. node.js 설치후에 정상적으로 설치됐는지 확인합니다.
+NestJS는 [Node.js][nodejs link] 런타임 환경에서 구동됩니다. Node.js 설치후에 정상적으로 설치됐는지 확인합니다.
 ```
 $ node -v
 v20.14.0
@@ -26,7 +26,7 @@ v20.14.0
 $ npm -v
 10.7.0
 ```
-이제 Nest CLI를 사용해서 새 프로젝트를 생성할 수 있습니다. 터미널에서 아래 명렁어로 새로운 Nest 프로젝트를 만들 수 있습니다.
+이제 Nest CLI를 사용해서 새 프로젝트를 생성할 수 있습니다. 터미널에서 아래 명령어로 새로운 Nest 프로젝트를 만들 수 있습니다.
 ```
 $ npm i -g @nestjs/cli
 $ nest new hi-nest
@@ -51,10 +51,10 @@ main.ts : Nest애플리케이션 인스턴스를 생성하기 위해 NestFactory
 ```
 $ npm run start:dev
 ```
-dev 명령어로 시작하면 파일변경시 자동으로 감지해서 서버를 다시 컴파일하고 로드하게 됩니다. 브라우저를 열고 http://localhost:3000/ 으로 이동하면 *Hello World.* 메세지가 표시됩니다. 이렇게 별도의 설정이나 파일 작성없이, CLI 명령어 몇줄로 간단하게 웹 어플리케이션 프로젝트를 생성하고 테스트해 볼 수 있습니다.
+dev 명령어로 시작하면 파일변경시 자동으로 감지해서 서버를 다시 컴파일하고 로드하게 됩니다. 브라우저를 열고 http://localhost:3000/ 으로 이동하면 *Hello World.* 메세지가 표시됩니다. 이렇게 별도의 설정이나 파일 작성없이, CLI 명령어 몇줄로 간단하게 웹 어플리케이션 프로젝트를 생성하고 실행할 수 있습니다.
 
 ## 모듈
-모듈은 NestJS 특징에서 소개했다싶이 Nest가 애플리케이션 구조를 구성하는데 사용하는 핵심 클래스입니다. 각 애플리케이션은 최소한 하나의 루트 모듈이 존재하고, 루트 모듈은 nest가 애플리케이션을 빌드하는데 사용하는 시작점입니다. 아주 간단한 애플리케이션은 로트 모듈 하나만 있어도 되지만, 일반적으로 밀접하게 관련된 각각의 기능세트를 캡슐화한 모듈로 구성하여 여러개의 모듈을 사용하는 아키텍처를 구성하게 됩니다.  
+모듈은 NestJS 특징에서 소개했다싶이 Nest가 애플리케이션 구조를 구성하는데 사용하는 핵심 클래스입니다. 각 애플리케이션은 최소한 하나의 루트 모듈이 존재하고, 루트 모듈은 nest가 애플리케이션을 빌드하는데 사용하는 시작점입니다. 아주 간단한 애플리케이션은 루트 모듈 하나만 있어도 되지만, 일반적으로 밀접하게 관련된 각각의 기능세트를 캡슐화한 모듈로 구성하여 여러개의 모듈을 사용하는 아키텍처를 구성하게 됩니다.  
 저는 Nest로 Ollama와 REST 통신을 하고 웹소켓으로 메세지를 전송하는 어댑터 서버를 만들것이기 때문에, 3개의 모듈을 생성하겠습니다.  
 1. LLM - 클라이언트 단에서 요청을 받는 REST서비스를 제공
 2. Cast - Ollama 서버에 REST 통신
@@ -125,7 +125,7 @@ export class AppModule {}
 ```
 
 ## 컨트롤러와 서비스 클래스
-llm 모듈은 클라이언트(사용자)들에게 REST 요청을 받아서 여러가지 서비스를 제공하는 시작점 모듈입니다. 모듈과 마찬가지로 nest g 명령어를 써서 서비스와 컨트롤러 클래스를 간단하게 추가할 수 있습니다. 이름은 모듈과 똑같이 입력해야 하며, 그러면 자동으로 모듈클래스의 경로에 자동으로 파일을 생성합니다.  
+llm 모듈은 클라이언트(사용자)들에게 REST 요청을 받아서 여러가지 서비스를 제공하는 시작점 모듈입니다. 모듈과 마찬가지로 nest g 명령어를 사용해 서비스와 컨트롤러 클래스를 간단하게 추가할 수 있습니다. 이름은 모듈과 똑같이 입력해야 하며, 자동으로 모듈클래스의 경로에 파일을 생성합니다.  
 
 각 모듈의 경로로 이동해서 명령어를 입력할 필요가 없습니다! Nest가 알아서 찾아서 생성해줍니다. 또한 모듈에 자동으로 import도 해줍니다.
 {: style="text-align: center; font-style: italic;"}
@@ -184,7 +184,7 @@ src
 ㄴapp.service.ts
 ㄴmain.ts
 ```
-다음으로 Nest에서 요청에 대한 답변을 받아오는 LLM 모델 API 서버를 구축하기 위해 [Ollama][ollama link]를 설치하도록 하겠습니다. Ollama는 간략히 말해 LLM(Large Language Model)을 로컬 환경에서 쉽게 실행하고 활용할 수 있도록 돕는 오픈 소스 도구입니다. 본 포스팅에서는 주요 주제는 아니기때문에 자세한 설명 및 설치과정은 생략하고 진행하겠습니다. 저는 Ollama를 설치후에 llama3.2모델을 다운받았습니다.
+다음으로 Nest에서 요청에 대한 답변을 받아오는 LLM 모델 API 서버를 구축하기 위해 [Ollama][ollama link]를 설치하도록 하겠습니다. Ollama는 간략히 설명해해 LLM(Large Language Model)을 로컬 환경에서 쉽게 실행하고 활용할 수 있도록 돕는 오픈 소스 도구입니다. 본 포스팅에선 주요 주제가 아니기 때문에 자세한 설치과정 및 사용법은 생략하고 진행하겠습니다. 저는 Ollama를 설치후에 llama3.2모델을 다운받았습니다.
 Ollama를 설치하고나면 Ollama API를 사용할 수 있습니다. REST 요청으로 질의에 대한 답변을 스트림형태로 받아올 수 있습니다.  
 
 ![alt]({{ "/assets/2025-01-10-nestjs-ollama-llm/2025-01-10-nestjs-ollama-llm-03.png" | absolute_url}}){: .center-image }
@@ -349,10 +349,10 @@ export class LlmController {
     }
 }
 ```
-generate 메서드는 Observable 객체를 반환합니다. 해당 객체는 subscirbe(구독)을 통해 스트리밍되는 데이터를 받을 수 있으며, next(스트리밍 데이터를 수신할때 호출), error(스트리밍 과정에서 오류가 발생할때 호출), complete(스트리밍이 정상적으로 완료되었을때 호출) 3가지 콜백을 받습니다. 즉 전체적인 흐름은 클라이언트가 특정 REST API를 호출하고, llmService가 외부 API의 스트림데이터를 받아오고, 받아오는 데이터를 구독하여 웹소켓으로 특정 클라이언트한테 전송합니다.(sendToClient)  
+llmService의 generate 메서드는 Observable 객체를 반환합니다. 해당 객체는 subscirbe(구독)을 통해 스트리밍되는 데이터를 받을 수 있으며, next(스트리밍 데이터를 수신할때 호출), error(스트리밍 과정에서 오류가 발생할때 호출), complete(스트리밍이 정상적으로 완료되었을때 호출) 3가지 콜백을 받습니다. 클라이언트가 특정 REST API를 호출하고, llmService가 외부 API의 스트림데이터를 받아오고, 받아오는 데이터를 구독하여 웹소켓으로 특정 클라이언트한테 전송(sendToClient) 하는게 전체적인 흐름입니다.
 
-## TEST
-이제 Nest서버를 실행시키고, 정상적으로 통신이 이루어 지는지 테스트 해보겠습니다. 저는 웹소켓을 연결하고 클라이언트 코드를 따로 작성하지 않고 postman에서 제공하는 웹소켓 커넥션을 사용해서 테스트하겠습니다. 
+## Test
+이제 Nest서버를 실행시키고, 정상적으로 통신이 이루어 지는지 테스트 해보겠습니다. 저는 웹소켓 커넥션을 위해 클라이언트 코드를 따로 작성하지 않고 postman에서 제공하는 웹소켓 커넥션을 사용해서 테스트하겠습니다. 
 
 ![alt]({{ "/assets/2025-01-10-nestjs-ollama-llm/2025-01-10-nestjs-ollama-llm-04.png" | absolute_url}}){: .center-image }
 
@@ -371,7 +371,7 @@ Client connected: Uz38VcY-zErSptBTAAAB
     "prompt" : "why is the sky blue?"
 }
 ```
-json 응답으로 "status":"Streaming started"를 응답받고, 잠시후 스트리밍이 완료되면 NestJS 콘솔에 완료 로그가 출력됩니다. postman에 웹소켓 컬렉션의 Response탭을 보면, Ollama에서 받아온 스트림 데이터를 정상적으로 클라이언트에게 전송해서 출력된 모습을 확인할 수 있습니다.
+json 응답으로 "status":"Streaming started"를 응답받고, 잠시후 스트리밍이 완료되면 NestJS 콘솔에 완료 로그가 출력됩니다. postman에 웹소켓 커넥션의 Response탭을 보면, Ollama에서 받아온 스트림 데이터를 정상적으로 서버가 클라이언트에게 전송해서 출력된 모습을 확인할 수 있습니다.
 
 ![alt]({{ "/assets/2025-01-10-nestjs-ollama-llm/2025-01-10-nestjs-ollama-llm-06.png" | absolute_url}}){: .center-image }
 
@@ -379,6 +379,7 @@ json 응답으로 "status":"Streaming started"를 응답받고, 잠시후 스트
 [https://docs.nestjs.com/first-steps][ref1 link]  
 [https://github.com/ollama/ollama/blob/main/docs/api.md][ref2 link]
 
+[nodejs link]:https://nodejs.org/ko
 [nestjs link]:https://nestjs.com/
 [ollama link]:https://ollama.com/
 [ref1 link]:https://docs.nestjs.com/first-steps
