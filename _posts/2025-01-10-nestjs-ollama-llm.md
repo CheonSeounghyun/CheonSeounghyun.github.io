@@ -184,7 +184,7 @@ src
 ㄴapp.service.ts
 ㄴmain.ts
 ```
-다음으로 Nest에서 요청에 대한 답변을 받아오는 LLM 모델 API 서버를 구축하기 위해 [Ollama][ollama link]를 설치하도록 하겠습니다. Ollama는 간략히 설명해해 LLM(Large Language Model)을 로컬 환경에서 쉽게 실행하고 활용할 수 있도록 돕는 오픈 소스 도구입니다. 본 포스팅에선 주요 주제가 아니기 때문에 자세한 설치과정 및 사용법은 생략하고 진행하겠습니다. 저는 Ollama를 설치후에 llama3.2모델을 다운받았습니다.
+다음으로 Nest에서 요청에 대한 답변을 받아오는 LLM 모델 API 서버를 구축하기 위해 [Ollama][ollama link]를 설치하도록 하겠습니다. Ollama는 간략히 설명하면 LLM(Large Language Model)을 로컬 환경에서 쉽게 실행하고 활용할 수 있도록 돕는 오픈 소스 도구입니다. 본 포스팅에선 주요 주제가 아니기 때문에 자세한 설치과정 및 사용법은 생략하고 진행하겠습니다. 저는 Ollama를 설치후에 llama3.2모델을 다운받았습니다.
 Ollama를 설치하고나면 Ollama API를 사용할 수 있습니다. REST 요청으로 질의에 대한 답변을 스트림형태로 받아올 수 있습니다.  
 
 ![alt]({{ "/assets/2025-01-10-nestjs-ollama-llm/2025-01-10-nestjs-ollama-llm-03.png" | absolute_url}}){: .center-image }
